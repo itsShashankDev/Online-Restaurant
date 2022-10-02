@@ -1,0 +1,624 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+:root {
+    --green: #1AC073;
+    --yellow:#F3BA00;
+    --grey:#edeef1;
+    --modal-bg-color: #F7F8FA;
+    --off-white: #F0FAF7;
+    --white-two: #F2F2F2;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Rubik', sans-serif;
+    
+}
+
+body {
+    height: 100vh;
+    max-width: 100vw;
+    
+}
+button {
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/*##################################   HEADER BEGINS  ################################################################################# */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10% ;
+    /* background-color: #1AC073; */
+    background-color: var(--green);
+    /* border: 2px solid black; */
+
+}
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    /* margin-left: 1px; */
+    /* border: 1px solid orange; */
+
+}
+li,
+a {
+    font-size: 18px;
+    color: var(--white-two);
+    text-decoration: none;
+    
+}
+
+nav {
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* border: 1px solid yellow; */
+    width: 66%;
+    
+}
+.main-menu-top-links {
+    display: flex;
+    gap: 1.2rem;
+    list-style: none;
+}
+.main-menu-top-links li {
+    display: inline-block;
+    padding: 0px 10px;
+}
+.search-cart-links {
+    width: 10%;
+    display: flex;
+    gap: 38px;
+    align-items: center;
+   
+}
+.search-cart-links button {
+    background: transparent;
+    
+}
+
+
+/*##################################   HEADER ENDS  ################################################################################# */
+
+/* ########################## LANDING HERO SECTION ##################### */
+
+.landing-section {
+    display: flex;
+    height: 100vh;
+    justify-content: space-between;
+
+    padding: 10% 10% 2% 10%;
+    background-color: var(--green);
+   
+
+}
+
+.landing-section .hero-display {
+    width: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+}
+.landing-section .hero-display .text-display {
+    color: var(--white-two);
+}
+.landing-section .hero-display .text-display h1{
+    margin-bottom: 15px;
+    font-weight: 300;
+    font-size: 3.8rem;
+    
+    
+}
+.landing-section .hero-display .text-display p {
+    font-size: 1.1rem;
+   
+
+}
+.landing-section .hero-display .search-input {
+    display: flex;
+    border-collapse: collapse;
+    margin-top: 7%;
+}
+.landing-section .hero-display .search-input input {
+    outline: none;
+    border: none;
+    background-color: var(--white-two);
+    padding: 5% 25% 5% 5%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    
+}
+
+.landing-section .hero-display .search-input button{
+    outline: none;
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--yellow);
+    color:var(--white-two);
+    cursor: pointer;
+    width: 13.75rem;
+   
+}
+/*############################### LANDING SECTION ENDS    ############################################### */
+
+/* ########################## KITCHEN SECTION BEGINS ######################## */
+.kitchen-section {
+    
+    background-color: var(--off-white);
+    padding: 7% 10% 2% 10%;
+    
+    
+}
+
+.cards-home {
+    
+    margin-top: 4%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr) ;
+    gap: 3% 2% ;
+}
+
+.home-kitchen h1{
+
+    font-size: 2.3rem;
+    font-weight: bolder;
+}
+
+.product-card {
+    border-radius: 10px;
+    border: 1px solid var(--grey);
+    background: transparent;
+    
+    
+}
+.product-card img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+   
+
+}
+.product-description {
+   
+    padding: 5%;
+    background: white;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
+}
+
+.description-price {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5%;
+    font-size: larger;
+    
+}
+.product-details {
+    margin-bottom: 3%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+
+.star-rating, 
+.time-taken{
+ 
+    border: 1px solid var(--grey);
+    border-radius: 5px;
+    padding: 1% 3%;
+    background-color: #f7f8fa;
+    font-size: small;
+}
+
+.time-taken {
+    box-shadow: -3px 0px  #BEBEBE ,
+    3px 0px #BEBEBE;
+    margin-right: 20%;
+}
+
+.add-food-btn {
+    background-color: white;
+}
+/* #################################  KITCHEN-SECTION ENDS  ############################## */
+.popular-items-section {
+    background: var(--off-white);
+    padding: 7% 10% 2% 10%;
+    
+
+}
+.popular-items-container {
+    text-align: center;
+    margin-top: 5%;
+}
+.popular-items-container h1{
+    font-size: 2.3rem;
+    margin-bottom: 1%;
+    font-weight: 1.8rem;
+}
+.popular-items-container #request-dish-open-modal{
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 1.3% 5%;
+    border-radius: 10px;
+    transition: 0.2s ease-in;
+}
+.popular-items-container #request-dish-open-modal:hover {
+    transform: scale(1.1);
+}
+.swiper-container{
+    display: flex;
+    align-items: center;
+   
+}
+.swiper {
+    width: 850px;
+    height: 400px;
+}
+
+ .swiper-slide {
+     text-align: center;
+     
+     display: flex;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     -webkit-justify-content: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     -webkit-align-items: center;
+     align-items: center;
+     flex-direction: column;
+ }
+ 
+ .highlight {
+    transition: all 0.3s ease-out;
+    cursor: pointer;
+ }
+ .highlight:hover {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px,
+                rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
+    transform: scale(1.1)
+ }
+
+.swiper-prev .fa-solid.fa-play,
+.swiper-next .fa-solid.fa-play{
+    font-size: 2rem;
+   
+}
+.swiper-prev i{
+    margin-right: 5px;
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+
+}
+.swiper-next i {
+    margin-left: 5px;
+
+}
+ .swiper-next,
+ .swiper-prev {
+    cursor: pointer;
+    color: var(--green);
+    border: 2px solid var(--green);
+    border-radius: 50%;
+    
+    background-color: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    width: 70px;
+    transition: all 0.2s ease-in-out;
+    
+ }
+ .swiper-next:hover,
+ .swiper-prev:hover{
+    transform: scale(0.9);
+    border: none;
+    background-color: var(--green);
+    color: var(--off-white);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, 
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+ }
+
+ /* ################################## SERVICE-SECTION BEGINS ############################# */
+.service-section {
+    
+    background-color: #FAFAFA;
+    /* min-height: 100vh; */
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.service-container {
+    
+    height: 100vh;
+    padding: 2% 5% ;
+    z-index: 3;
+  
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+ 
+    
+}
+
+.service-content h1 {
+    font-size: 2.5rem;
+    font-weight: 2rem;
+   
+}
+
+.service-content p {
+    color: rgb(119, 119, 119);
+    font-weight: lighter;
+    margin-top: 2%;
+}
+
+
+.service-background {
+    
+    background-color: #C7EACC;
+    
+    position: absolute;
+    z-index: 2;
+   
+    width: 100%;
+    height: 250px;  
+    margin-top: 31%;  
+    
+}
+.service-video{ 
+
+    z-index: 3;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* margin-top: 2%; */
+    
+
+}
+#playVdoBtn {
+    position: absolute;
+    background-color:var(--green);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    z-index: 10;
+    transition: 0.2s all ease-in-out;
+}
+
+#playVdoBtn i {
+    color: white;
+    font-size: 2.5rem;
+    margin-left: 5px;
+   
+}
+#playVdoBtn:hover{
+    transform: scale(1.1);
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+            rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+
+
+/* ##################################### CONTACT-US SECTION BEGINS ############################ */
+.contact-us-section {
+    padding: 5% 10% 5% 10%;
+    background-color: var(--modal-bg-color);
+}
+.contact-us-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.contact-info{
+    width: 55%;
+}
+.contact-info-inputs {
+    display: flex;
+    justify-content: space-between;
+}
+.contact-info h2 {
+    font-weight: 400;
+}
+.contact-info p{
+    font-size: small;
+    margin-top: 2%;
+}
+.contact-info input {
+    width: 49%;
+    border: 1px solid var(--grey);
+    outline: none;
+    padding: 3% ;
+    border-radius: 10px;
+    margin: 6% 0% 4% 0%;
+} 
+
+.contact-info textarea {
+    width: 100%;
+    border: 1px solid var(--grey);
+    outline: none;
+    border-radius: 10px;
+    padding: 3% ;
+    resize: none;
+    margin: 0% 0% 3% 0%;
+}
+
+
+.contact-info input:focus,
+.contact-info textarea:focus {
+
+    outline: none;
+}
+
+.contact-info button {
+    padding: 3%;
+    background: var(--green);
+    color: var(--white-two);
+    border-radius: 10px;
+    width: 32%;
+
+}
+/* ########################## CONTACT-US SECTION ENDS ####################### */
+
+/* ########################## FOOTER ########################### */
+footer {
+    padding: 25px 10%;
+    background: var(--green);
+}
+.footer-container {
+    border-bottom: 1px solid var(--off-white);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 0% 3% 0%; 
+}
+.social-media-links {
+    display: flex;
+    gap: 1rem;
+}
+/* ######################### FOOTER ENDS ################################### */
+
+/* #####################################   MODALS BEGIN #################################### */
+.modal-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0,0,0,0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 5;
+
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+
+    
+}
+.modal-container.show {
+    pointer-events: auto;
+    opacity: 1;
+   
+}
+
+.modal {
+
+    background-color: var(--modal-bg-color);
+    width: 90%;
+    max-width: 100%;
+    padding: 5% 10%;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    min-height: 92%;
+
+}
+
+.modal-btns{
+    padding: 1.5% 2%;
+    margin: 1%;
+    border: 2px solid var(--green);
+    border-radius: 6px;
+    width: 15%;
+    transition: 0.2s ease-in-out;
+
+}
+.modal-btns:hover {
+    transform: scale(1.1);
+
+}
+.cart-modal h1{
+    margin-top: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+.cart-modal p{
+    opacity: 0.5;
+    margin-bottom: 1.8rem;
+
+}
+
+
+.request-dish-modal {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 420px;
+  
+}
+
+.request-dish-info {
+    display: flex;
+    flex-direction: column;
+    
+}
+.request-dish-info label {
+    text-align: left;
+}
+
+.request-dish-info input{
+    width: 100%;
+    border: 1px solid var(--grey);
+    outline: none;
+    padding: 2%;
+    border-radius: 10px;
+    background-color: var(--white-two);
+    margin-bottom: 3%;
+
+}
+
+
+#request-dish-close-modal {
+    background-color: transparent;
+    color: var(--green);
+
+}
+#request-dish-open-modal,
+#close-cart-modal,
+#response-submitted-close-modal{
+    background: var(--green);
+    color: var(--white-two);
+   
+
+}
+
+/* #####################################   MODALS END #################################### */
+
+/*############################### SCROLLBAR ######################################## */
+/* width */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #C7EACC;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background:var(--yellow);
+    border-radius: 10px;
+}
